@@ -7,7 +7,8 @@ import {
   Patch,
   Post,
 } from '@nestjs/common';
-import { ParseUUIDPipe } from '@nestjs/common/pipes';
+import { UsePipes } from '@nestjs/common/decorators/core/use-pipes.decorator';
+import { ParseUUIDPipe, ValidationPipe } from '@nestjs/common/pipes';
 import { CarsService } from './cars.service';
 import { CreateCarDTO } from './dto/create-car.dto';
 
