@@ -12,6 +12,7 @@ export class CarsService {
   ];
 
   findAll() {
+    console.log(this.cars);
     return this.cars;
   }
 
@@ -51,5 +52,9 @@ export class CarsService {
   delete(id: string) {
     this.findOneById(id);
     this.cars = this.cars.filter((car) => car.id !== id);
+  }
+
+  fillsCarsWithSeedData(cars: Car[]) {
+    this.cars = cars;
   }
 }
